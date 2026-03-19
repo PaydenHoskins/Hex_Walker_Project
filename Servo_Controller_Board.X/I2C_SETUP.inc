@@ -20,11 +20,11 @@ BYTE_1		EQU H'073'
 BYTE_2		EQU H'074'
 BYTE_3		EQU H'075'
 BYTE_4		EQU H'076'
-BUTTON_JOYSTICK	EQU H'078'
-BYTE_1_B	EQU H'079'
-BYTE_2_B	EQU H'07A'
-BYTE_3_B	EQU H'07B'
-BYTE_4_B	EQU H'07C'
+BYTE_5		EQU H'077'
+BYTE_6	        EQU H'078'
+BYTE_7	        EQU H'079'
+BYTE_8		EQU H'07A'
+TEMP		EQU H'07B'
     
 I2C_CODE CODE 
     
@@ -63,7 +63,15 @@ I2C_SLAVE_SETUP
     
     CLRF    BYTE_NUMBER
     CLRF    BUFFER_SAVE
-    CLRF    BUTTON_JOYSTICK
+    CLRF    BYTE_ADDRESS
+    CLRF    BYTE_1
+    CLRF    BYTE_2
+    CLRF    BYTE_3
+    CLRF    BYTE_4
+    CLRF    BYTE_5
+    CLRF    BYTE_6
+    CLRF    BYTE_7
+    CLRF    BYTE_8
     
     BANKSEL INTCON
     BSF	    INTCON,7
@@ -83,64 +91,117 @@ I2C_RECIVE
     BTFSS   SSP1STAT, 5	    ;TEST IF ADDRESS OR DATA, DATA-1, ADD-0
     GOTO    ADDRESS_RECIVE
     GOTO    DATA_RECIVE
-    GOTO    END_RECIVE
-    
-DATA_RECIVE    
-    BTFSC   BUTTON_JOYSTICK, 0	;test if its the joystick or button data byte
-    GOTO    BUTTON_BYTES	;save button data
-    GOTO    SERVO_BYTES		;save servo data
-    GOTO    END_RECIVE
     
 ADDRESS_RECIVE
-    CLRF    BUTTON_JOYSTICK
-    BTFSC   BUFFER_SAVE, 4  ;TEST IF GEN-CALL OR NOT
-    BSF	    BUTTON_JOYSTICK,0	;SET IF NOT GEN-CALL
-    GOTO    END_RECIVE
-    
-;------------SERVO DATA BYTE-----------------  
-SERVO_BYTES
     MOVF    BUFFER_SAVE, 0
-    BTFSC   BYTE_NUMBER, 0
-    GOTO    SERVO_BYTE_2
-    BSF	    BYTE_NUMBER, 0
+    MOVWF   BYTE_ADDRESS
+    GOTO    END_RECIVE  
+    
+DATA_RECIVE   
+    INCF    BYTE_NUMBER, 1
+    MOVLW   H'10'
+    XORWF   BYTE_ADDRESS, 0
+    BANKSEL STATUS
+    BTFSS   STATUS, 2
+    GOTO    JOYSTICKS		;DETERMINE WHAT BYTE IT IS, 2 PACKETS ARE SENT EACH PACKET HAD 4 BYTES AND EACH ARE SENT UNDER DIFFRENT ADDRESSES.
+    GOTO    BUTTONS
+    
+;------------WHICH BYTE-----------------  
+JOYSTICKS
+    BANKSEL STATUS
+    MOVLW   H'01'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_1_SAVE
+    
+    MOVLW   H'02'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_2_SAVE
+    
+    MOVLW   H'03'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_3_SAVE
+    
+    MOVLW   H'04'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_4_SAVE
+    
+BUTTONS
+    MOVLW   H'01'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_5_SAVE
+    
+    MOVLW   H'02'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_6_SAVE
+    
+    MOVLW   H'03'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_7_SAVE
+    
+    MOVLW   H'04'
+    XORWF   BYTE_NUMBER, 0
+    BTFSC   STATUS, 2
+    GOTO    BYTE_8_SAVE
+    GOTO    END_RECIVE        
+;--------------------------------------------
+    
+;------------DATA BYTE SAVE----------------
+BYTE_1_SAVE
+    MOVF    BUFFER_SAVE, 0
     MOVWF   BYTE_1
     GOTO    END_RECIVE
-SERVO_BYTE_2	
-    BTFSC   BYTE_NUMBER, 1
-    GOTO    SERVO_BYTE_3
-    BSF	    BYTE_NUMBER, 1
+    
+BYTE_2_SAVE
+    MOVF    BUFFER_SAVE, 0
     MOVWF   BYTE_2
     GOTO    END_RECIVE
-SERVO_BYTE_3	
-    BTFSC   BYTE_NUMBER, 2
-    GOTO    SERVO_BYTE_4
-    BSF	    BYTE_NUMBER, 2
+    
+BYTE_3_SAVE
+    MOVF    BUFFER_SAVE, 0
     MOVWF   BYTE_3
-    GOTO    END_RECIVE   
-SERVO_BYTE_4	
-    BTFSC   BYTE_NUMBER, 3
     GOTO    END_RECIVE
-    CLRF    BYTE_NUMBER
+    
+BYTE_4_SAVE
+    MOVF    BUFFER_SAVE, 0
     MOVWF   BYTE_4
-    GOTO    END_RECIVE     
-    
-;--------------------------------------------
-    
-;------------BUTTON DATA BYTE----------------
-BUTTON_BYTES
     GOTO    END_RECIVE
-;--------------------------------------------
     
-;---------------SERVO_DATA-------------------	    
-;--------------------------------------------
+BYTE_5_SAVE
+    MOVF    BUFFER_SAVE, 0
+    MOVWF   BYTE_5
+    GOTO    END_RECIVE
     
-;---------------BUTTON_DATA------------------
+BYTE_6_SAVE
+    MOVF    BUFFER_SAVE, 0
+    MOVWF   BYTE_6
+    GOTO    END_RECIVE
+    
+BYTE_7_SAVE
+    MOVF    BUFFER_SAVE, 0
+    MOVWF   BYTE_7
+    GOTO    END_RECIVE
+    
+BYTE_8_SAVE
+    MOVF    BUFFER_SAVE, 0
+    MOVWF   BYTE_8
+    CLRF    BYTE_NUMBER
+    GOTO    END_RECIVE
 ;--------------------------------------------
     
 END_RECIVE   
-    
     BANKSEL PORTB
-    MOVF    BYTE_1, 0
+    MOVF    BYTE_2, 0
+    MOVWF   TEMP
+    LSRF    TEMP, 1
+    LSRF    TEMP, 1
+    MOVF    TEMP, 0
     MOVWF   PORTB
     
     BANKSEL SSP1CON1	
