@@ -86,109 +86,61 @@ I2C_RECIVE
     GOTO    END_RECIVE
     
 DATA_RECIVE    
-    BTFSC   BUTTON_JOYSTICK, 0
-    GOTO    BUTTON_SAVE
-    GOTO    BYTE_TEST
+    BTFSC   BUTTON_JOYSTICK, 0	;test if its the joystick or button data byte
+    GOTO    BUTTON_BYTES	;save button data
+    GOTO    SERVO_BYTES		;save servo data
     GOTO    END_RECIVE
     
 ADDRESS_RECIVE
     CLRF    BUTTON_JOYSTICK
-    BSF	    BYTE_NUMBER, 0  ;NEXT BYTE IS DATA_1
     BTFSC   BUFFER_SAVE, 4  ;TEST IF GEN-CALL OR NOT
     BSF	    BUTTON_JOYSTICK,0	;SET IF NOT GEN-CALL
     GOTO    END_RECIVE
     
-;-----SERVO DATA BYTE-----------------  
-BYTE_TEST
-    BTFSC   BYTE_NUMBER, 3
-    GOTO    BYTE_SENT_4
-    BTFSC   BYTE_NUMBER, 2
-    GOTO    BYTE_SENT_3
-    BTFSC   BYTE_NUMBER, 1
-    GOTO    BYTE_SENT_2
-    BTFSC   BYTE_NUMBER, 0
-    GOTO    BYTE_SENT_1
-    GOTO    END_RECIVE
-    
-;---------BUTTON DATA BYTE-----------   
-BUTTON_SAVE
+;------------SERVO DATA BYTE-----------------  
+SERVO_BYTES
     MOVF    BUFFER_SAVE, 0
-    BTFSC   BYTE_NUMBER, 3
-    GOTO    BYTE_SENT_4_B
-    BTFSC   BYTE_NUMBER, 2
-    GOTO    BYTE_SENT_3_B
-    BTFSC   BYTE_NUMBER, 1
-    GOTO    BYTE_SENT_2_B
     BTFSC   BYTE_NUMBER, 0
-    GOTO    BYTE_SENT_1_B
-    GOTO    END_RECIVE
-    
-;--------SERVO_DATA-----------    
-BYTE_SENT_1
-    MOVF    BUFFER_SAVE,0
+    GOTO    SERVO_BYTE_2
+    BSF	    BYTE_NUMBER, 0
     MOVWF   BYTE_1
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 1
     GOTO    END_RECIVE
-    
-BYTE_SENT_2
-    MOVF    BUFFER_SAVE,0
+SERVO_BYTE_2	
+    BTFSC   BYTE_NUMBER, 1
+    GOTO    SERVO_BYTE_3
+    BSF	    BYTE_NUMBER, 1
     MOVWF   BYTE_2
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 2
     GOTO    END_RECIVE
-    
-BYTE_SENT_3
-    MOVF    BUFFER_SAVE,0
+SERVO_BYTE_3	
+    BTFSC   BYTE_NUMBER, 2
+    GOTO    SERVO_BYTE_4
+    BSF	    BYTE_NUMBER, 2
     MOVWF   BYTE_3
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 3
+    GOTO    END_RECIVE   
+SERVO_BYTE_4	
+    BTFSC   BYTE_NUMBER, 3
     GOTO    END_RECIVE
-    
-BYTE_SENT_4    
-    MOVF    BUFFER_SAVE,0
+    CLRF    BYTE_NUMBER
     MOVWF   BYTE_4
-    CLRF    BYTE_NUMBER
-    CLRF    BUTTON_JOYSTICK
-    GOTO    END_RECIVE
-;-------------------------------
+    GOTO    END_RECIVE     
     
-;--------BUTTON_DATA-----------    
-BYTE_SENT_1_B
-    MOVF    BUFFER_SAVE,0
-    MOVWF   BYTE_1_B
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 1
-    GOTO    END_RECIVE
+;--------------------------------------------
     
-BYTE_SENT_2_B
-    MOVF    BUFFER_SAVE,0
-    MOVWF   BYTE_2_B
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 2
+;------------BUTTON DATA BYTE----------------
+BUTTON_BYTES
     GOTO    END_RECIVE
+;--------------------------------------------
     
-BYTE_SENT_3_B
-    MOVF    BUFFER_SAVE,0
-    MOVWF   BYTE_3_B
-    CLRF    BYTE_NUMBER
-    BSF	    BYTE_NUMBER, 3
-    GOTO    END_RECIVE
+;---------------SERVO_DATA-------------------	    
+;--------------------------------------------
     
-BYTE_SENT_4_B
-    MOVF    BUFFER_SAVE,0
-    MOVWF   BYTE_4_B
-    CLRF    BYTE_NUMBER
-    CLRF    BUTTON_JOYSTICK
-    GOTO    END_RECIVE
-;-------------------------------
+;---------------BUTTON_DATA------------------
+;--------------------------------------------
     
 END_RECIVE   
     
-    CLRF    BUFFER_SAVE
-    
     BANKSEL PORTB
-    MOVF    BYTE_4, 0
+    MOVF    BYTE_1, 0
     MOVWF   PORTB
     
     BANKSEL SSP1CON1	
