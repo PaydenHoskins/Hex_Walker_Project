@@ -11,8 +11,11 @@
 
 COMPARE_BYTE	    EQU H'070'
 RESET_BYTE	    EQU H'071'
-POSITION_BYTE	    EQU H'072'
-COUNT1		    EQU	H'073'    
+COUNT1		    EQU	H'072' 
+COUNT2		    EQU H'073'
+COUNT3		    EQU H'074'
+TEMP		    EQU H'075'
+LEG_GROUP	    EQU H'076'
     
 ;******************************************
 ;Include Files
@@ -56,11 +59,12 @@ SETUP
     
     CLRF	COMPARE_BYTE
     
-    CLRF	POSITION_BYTE
-    BSF		POSITION_BYTE,0
-    
     MOVLW	H'14'
     MOVWF	COUNT1
+    MOVLW	H'14'
+    MOVWF	COUNT2
+    MOVLW	H'14'
+    MOVWF	COUNT3
     
     MOVLW	H'FF'
     MOVWF	RESET_BYTE
@@ -71,9 +75,16 @@ SETUP
 ;Interrupt Service Routine
 ;******************************************
 INTERRUPT
-    GOTO	PWM
+    GOTO	LEG_GROUP_CHECK
     
 TIMER_2_START
+    
+    CLRF    LEG_GROUP
+    BANKSEL PORTA
+    BTFSS   PORTA, 0
+    BSF	    LEG_GROUP, 0
+    BSF	    LEG_GROUP, 1
+    
     BANKSEL	INTCON
     BSF		INTCON,7    ;ENABLE GLOBALS
     
@@ -81,17 +92,384 @@ TIMER_2_START
     BSF		T2CON, 2    ;START TIMER 2
     
     BANKSEL	PORTB
+    BSF		PORTB, 2
+    BSF		PORTB, 1
     BSF		PORTB, 0    ;SET PORT B BIT 0 TO HIGH SO ITS READY FOR PWM	
     
     GOTO	MAIN
 MAIN
-    BTFSC	PORTB, 1
-    GOTO	POSITION_SET_CHANGE
+    NOP
+    NOP
+    ;GOTO	POSITION_SET_CHANGE
+    NOP
+    NOP
     GOTO MAIN
-
+  
+;-----------POSITION-----------    
     
-;------------PWM--------------
-PWM
+LEG_GROUP_CHECK
+    BTFSC   LEG_GROUP, 0
+    GOTO    POSITIONS1
+    BTFSC   LEG_GROUP, 1
+    GOTO    POSITIONS2
+    
+;<editor-fold defaultstate="collapsed" desc="TEST_DIPSWITCH 1, 4, 5">
+    
+POSITIONS1   
+    
+    BANKSEL PORTB
+    CLRF    TEMP
+    MOVF    PORTB, 0
+    MOVWF   TEMP
+    
+    LSRF    TEMP,1
+    LSRF    TEMP,1
+    LSRF    TEMP,1
+    
+    MOVLW   H'00'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_01
+   
+    MOVLW   H'01'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_11
+    
+    MOVLW   H'02'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_21
+    
+    MOVLW   H'03'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_31
+    
+    MOVLW   H'04'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_41
+    
+    MOVLW   H'05'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_51
+    
+    MOVLW   H'06'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_61
+    
+    MOVLW   H'07'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_71
+    
+    MOVLW   H'08'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_76
+    
+    MOVLW   H'09'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_67
+    GOTO    POSITION_01
+    ;</editor-fold>
+    
+;<editor-fold defaultstate="collapsed" desc="TEST_DIPSWITCH 2, 3, 6">
+    
+POSITIONS2
+    
+    BANKSEL PORTB
+    CLRF    TEMP
+    MOVF    PORTB, 0
+    MOVWF   TEMP
+    
+    LSRF    TEMP,1
+    LSRF    TEMP,1
+    LSRF    TEMP,1
+    
+    MOVLW   H'00'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_02
+   
+    MOVLW   H'01'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_12
+    
+    MOVLW   H'02'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_22
+    
+    MOVLW   H'03'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_32
+    
+    MOVLW   H'04'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_42
+    
+    MOVLW   H'05'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_52
+    
+    MOVLW   H'06'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_62
+    
+    MOVLW   H'07'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_72
+    
+    MOVLW   H'08'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_82
+    
+    MOVLW   H'09'
+    XORWF   TEMP, 0
+    BANKSEL STATUS
+    BTFSC   STATUS, 2
+    GOTO    POSITION_92
+    GOTO    POSITION_02
+    ;</editor-fold>
+
+;<editor-fold defaultstate="collapsed" desc="LEGS 1,4,5">
+POSITION_01
+    ;<editor-fold defaultstate="collapsed" desc="POSITION H'00'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+
+POSITION_11
+    ;<editor-fold defaultstate="collapsed" desc="POSITION H'01'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+   
+POSITION_21
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_31
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'03'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'10'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_41
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'10'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_51
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'10'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_61
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'10'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_71
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_76
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM
+    ;</editor-fold>
+    
+POSITION_67
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM
+    ;</editor-fold>
+    ;</editor-fold>     
+    
+;<editor-fold defaultstate="collapsed" desc="LEGS 2,3,6">
+POSITION_02
+    ;<editor-fold defaultstate="collapsed" desc="POSITION H'00'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+
+POSITION_12
+    ;<editor-fold defaultstate="collapsed" desc="POSITION H'01'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+   
+POSITION_22
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_32
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'03'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_42
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_52
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_62
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_72
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_82
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'14'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    MOVLW   H'14'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_92
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'02'">
+    MOVLW   H'0B'   ;(45 DEGREE)
+    MOVWF   COUNT1
+    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
+    MOVWF   COUNT2
+    MOVLW   H'14'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    ;</editor-fold>  
+
+INC_PWM    
     INCF	COMPARE_BYTE, 1
     
     MOVF	COMPARE_BYTE, 0
@@ -99,7 +477,27 @@ PWM
     
     BANKSEL	STATUS
     BTFSC	STATUS, 2
-    GOTO	COUNT_EQUAL
+    GOTO	COUNT1_EQUAL
+    
+COUNT2_TEST
+    
+    MOVF	COMPARE_BYTE, 0
+    XORWF	COUNT2, 0
+    
+    BANKSEL	STATUS
+    BTFSC	STATUS, 2
+    GOTO	COUNT2_EQUAL
+    
+COUNT3_TEST    
+    
+    MOVF	COMPARE_BYTE, 0
+    XORWF	COUNT3, 0
+    
+    BANKSEL	STATUS
+    BTFSC	STATUS, 2
+    GOTO	COUNT3_EQUAL
+    
+RESET_TEST    
     
     MOVF	COMPARE_BYTE, 0
     XORWF	RESET_BYTE, 0
@@ -109,14 +507,29 @@ PWM
     GOTO	RESET_PULSE
     GOTO	END_PWM
     
-COUNT_EQUAL
+;PW_END   
+;<editor-fold defaultstate="collapsed" desc="THIS RUNS WHEN THE COMPARE BYTE = THE COUNT BYTE">
+    
+COUNT1_EQUAL
     BANKSEL	PORTB
     BCF		PORTB, 0
-    GOTO	END_PWM
+    GOTO	COUNT2_TEST
     
+COUNT2_EQUAL
+    BANKSEL	PORTB
+    BCF		PORTB, 1
+    GOTO	COUNT3_TEST
+    
+COUNT3_EQUAL
+    BANKSEL	PORTB
+    BCF		PORTB, 2
+    GOTO	RESET_TEST    ;</editor-fold>
+ 
 RESET_PULSE
     BANKSEL	PORTB
     BSF		PORTB, 0
+    BSF		PORTB, 1
+    BSF		PORTB, 2
     
     CLRF	COMPARE_BYTE
     GOTO	END_PWM
@@ -125,30 +538,8 @@ END_PWM
     BANKSEL	PIR1
     BCF		PIR1, 1
     RETFIE
-;------------------------------
-    
-;-----------POSITION-----------
-POSITION_SET_CHANGE
-    BTFSC   POSITION_BYTE, 0
-    GOTO    POSITION_1
-    
-    BTFSC   POSITION_BYTE, 1
-    GOTO    POSITION_2
-    GOTO    MAIN
-
-POSITION_1
-    MOVLW   H'1F'   ;MAX
-    MOVWF   COUNT1
-    CLRF    POSITION_BYTE
-    BSF	    POSITION_BYTE, 1
-    GOTO    MAIN
-    
-POSITION_2
-    MOVLW   H'08'   ;MIN
-    MOVWF   COUNT1
-    CLRF    POSITION_BYTE
-    BSF	    POSITION_BYTE, 0
-    GOTO    MAIN
+;------------------------------  
+   
     END  
 
 
