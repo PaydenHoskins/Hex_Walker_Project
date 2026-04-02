@@ -19,6 +19,7 @@ LEG_GROUP	    EQU H'076'
 POSITION_BYTE	    EQU H'077'
 W_SAVE		    EQU H'078'
 BANK_SAVE	    EQU H'079'
+INC_COUNT	    EQU H'07A'
     
 ;******************************************
 ;Include Files
@@ -102,28 +103,25 @@ TIMER_2_START
     
     GOTO	MAIN
 MAIN
-    BANKSEL IOCAF
-    CLRF    IOCAF
-    BTFSC   IOCAF, 1
-    GOTO    INC_POSITION
+    ;BANKSEL IOCAF
+    ;CLRF    IOCAF
+    ;BTFSC   IOCAF, 1
+    ;GOTO    INC_POSITION
+    NOP
     GOTO MAIN
 
 INC_POSITION
-    BANKSEL PORTA
-    BSF	    PORTA, 3
-    BCF	    PORTA, 3
+    CLRF    INC_COUNT
     INCF    POSITION_BYTE, 1
-    MOVLW   H'0C'
+    MOVLW   H'09'
     XORWF   POSITION_BYTE, 0
     BANKSEL STATUS
     BTFSS   STATUS, 2
-    GOTO    MAIN
+    GOTO    FINISH_RESET
     CLRF    POSITION_BYTE
-    MOVLW   H'02'
+    MOVLW   H'03'
     MOVWF   POSITION_BYTE
-    BANKSEL IOCAF
-    CLRF    IOCAF
-    GOTO    MAIN
+    GOTO    FINISH_RESET
     
 ;-------W & BANKSEL SAVE-------  
 SAVE_REG    
@@ -200,26 +198,9 @@ POSITION_TEST
     BANKSEL STATUS
     BTFSC   STATUS, 2
     GOTO    POSITION_8
-    
-    MOVLW   H'09'
-    XORWF   TEMP, 0
-    BANKSEL STATUS
-    BTFSC   STATUS, 2
-    GOTO    POSITION_9
-    
-    MOVLW   H'0A'
-    XORWF   TEMP, 0
-    BANKSEL STATUS
-    BTFSC   STATUS, 2
-    GOTO    POSITION_10
-    
-    MOVLW   H'0B'
-    XORWF   TEMP, 0
-    BANKSEL STATUS
-    BTFSC   STATUS, 2
-    GOTO    POSITION_11
     GOTO    POSITION_0
-    ;</editor-fold>   
+    ;</editor-fold> 
+    
 ;<editor-fold defaultstate="collapsed" desc="LEG_SERVO_DATA">
 POSITION_0
     ;<editor-fold defaultstate="collapsed" desc="POSITION H'00'">
@@ -263,7 +244,7 @@ POSITION_2
     
     MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVLW   H'17'   ;MID (90 DEGREE)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
@@ -279,9 +260,9 @@ POSITION_3
     MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
     MOVWF   COUNT2
     
-    MOVLW   H'10'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'11'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVLW   H'17'   ;MID (90 DEGREE)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
@@ -289,6 +270,24 @@ POSITION_4
     ;<editor-fold defaultstate="collapsed" desc="POSTITON H'04'">
     MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
+    MOVLW   H'0B'   ;MID (FOOT SERVO)
+    MOVWF   COUNT1
+    
+    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
+    BTFSC   LEG_GROUP, 0
+    MOVLW   H'0B'   ;MID (JOINT SERVO)
+    MOVWF   COUNT2
+    
+    MOVLW   H'17'   ;(45 DEGREE, LEGS 1,4,5)
+    BTFSC   LEG_GROUP, 0
+    MOVLW   H'11'   ;MID (90 DEGREE)
+    MOVWF   COUNT3
+    GOTO    INC_PWM;</editor-fold>
+    
+POSITION_5
+    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'05'">
+    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
+    BTFSC   LEG_GROUP, 0
     MOVLW   H'14'   ;MID (FOOT SERVO)
     MOVWF   COUNT1
     
@@ -297,27 +296,9 @@ POSITION_4
     MOVLW   H'14'   ;MID (JOINT SERVO)
     MOVWF   COUNT2
     
-    MOVLW   H'10'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'17'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'19'   ;MID (90 DEGREE)
-    MOVWF   COUNT3
-    GOTO    INC_PWM;</editor-fold>
-    
-POSITION_5
-    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'05'">
-    MOVLW   H'0B'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;MID (FOOT SERVO)
-    MOVWF   COUNT1
-    
-    MOVLW   H'0B'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;MID (JOINT SERVO)
-    MOVWF   COUNT2
-    
-    MOVLW   H'10'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'19'   ;MID (90 DEGREE)
+    MOVLW   H'11'   ;MID (90 DEGREE)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
@@ -333,9 +314,9 @@ POSITION_6
     MOVLW   H'14'   ;MID (JOINT SERVO)
     MOVWF   COUNT2
     
-    MOVLW   H'10'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'17'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVLW   H'11'   ;MID (SHOLDER SERVO)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
@@ -351,83 +332,30 @@ POSITION_7
     MOVLW   H'14'   ;MID (JOINT SERVO)
     MOVWF   COUNT2
     
-    MOVLW   H'19'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'11'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;MID (SHOLDER SERVO)
+    MOVLW   H'17'   ;MID (SHOLDER SERVO)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
 POSITION_8
     ;<editor-fold defaultstate="collapsed" desc="POSTITON H'08'">
-    MOVLW   H'0B'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
     MOVLW   H'14'   ;MID (FOOT SERVO)
     MOVWF   COUNT1
     
-    MOVLW   H'0B'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
     MOVLW   H'14'   ;MID (JOINT SERVO)
     MOVWF   COUNT2
     
-    MOVLW   H'19'   ;(45 DEGREE, LEGS 1,4,5)
+    MOVLW   H'11'   ;(45 DEGREE, LEGS 1,4,5)
     BTFSC   LEG_GROUP, 0
-    MOVLW   H'10'   ;MID (SHOLDER SERVO)
+    MOVLW   H'17'   ;MID (SHOLDER SERVO)
     MOVWF   COUNT3
     GOTO    INC_PWM;</editor-fold>
     
-POSITION_9
-    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'09'">
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;(45 DEGREE)
-    MOVWF   COUNT1
-    
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'14'   ;MIN (ALL THE WAY UP)
-    MOVWF   COUNT2
-    
-    MOVLW   H'19'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'10'   ;MID (90 DEGREE)
-    MOVWF   COUNT3
-    GOTO    INC_PWM;</editor-fold>
-    
-POSITION_10
-    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'0A'">
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'0B'   ;(45 DEGREE)
-    MOVWF   COUNT1
-    
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
-    MOVWF   COUNT2
-    
-    MOVLW   H'19'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'10'   ;MID (90 DEGREE)
-    MOVWF   COUNT3
-    GOTO    INC_PWM;</editor-fold>
-    
-POSITION_11
-    ;<editor-fold defaultstate="collapsed" desc="POSTITON H'0B'">
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'0B'   ;(45 DEGREE)
-    MOVWF   COUNT1
-    
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'0B'   ;MIN (ALL THE WAY UP)
-    MOVWF   COUNT2
-    
-    MOVLW   H'14'   ;(45 DEGREE, LEGS 1,4,5)
-    BTFSC   LEG_GROUP, 0
-    MOVLW   H'19'   ;MID (90 DEGREE)
-    MOVWF   COUNT3
-    GOTO    INC_PWM;</editor-fold>
     ;</editor-fold>  
 
 INC_PWM    
@@ -487,6 +415,17 @@ COUNT3_EQUAL
     GOTO	RESET_TEST    ;</editor-fold>
  
 RESET_PULSE
+    BANKSEL	PORTB
+    BTFSC	PORTB, 5
+    INCF	INC_COUNT, 1
+    
+    MOVLW	H'2F'
+    XORWF	INC_COUNT, 0
+    BANKSEL	STATUS
+    BTFSC	STATUS, 2
+    GOTO	INC_POSITION
+
+FINISH_RESET
     BANKSEL	PORTB
     BSF		PORTB, 0
     BSF		PORTB, 1
