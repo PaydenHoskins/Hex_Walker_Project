@@ -28,6 +28,9 @@ nbproject/private.properties
 *.obj
 *.exe
 
+#kicad
+*.history
+
 # MPLAB X transient logs
 *.log
 *.tlog
