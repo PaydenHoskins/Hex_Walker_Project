@@ -1,0 +1,3961 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "11bc14df-1352-4783-8c95-2d7c3fd02113")
+	(paper "A4")
+	(lib_symbols
+		(symbol "1_Payden:Header_2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Header_2_1_1"
+				(rectangle
+					(start -2.54 -2.54)
+					(end 1.27 -7.62)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -1.27)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.62)
+					(end 0 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at 3.81 -3.81 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 3.81 -6.35 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "1_Payden:Header_4"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Header_4_1_1"
+				(rectangle
+					(start -6.35 -1.2699)
+					(end -2.54 -11.4299)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -5.08 0)
+					(end -3.81 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -5.08 -11.43)
+					(end -3.81 -12.7)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at 0 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -5.08 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -7.62 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -10.16 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:Earth"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "Earth"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"Earth\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global ground gnd"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Earth_0_1"
+				(polyline
+					(pts
+						(xy -0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -2.54) (xy 0.127 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Earth_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 99.06 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "02c464d4-f416-4947-9070-6c9061a9fa6e")
+	)
+	(junction
+		(at 160.02 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "128f4b94-9573-4dfd-83b2-0a6514f64e87")
+	)
+	(junction
+		(at 93.98 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1de8827c-dd03-4ef3-9a9c-251c3badae42")
+	)
+	(junction
+		(at 50.8 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d07c772-bdf5-471e-b218-583505317a36")
+	)
+	(junction
+		(at 111.76 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d63bb69-7189-4168-83ea-cf3c0c7cf6bf")
+	)
+	(junction
+		(at 238.76 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33410d6a-8310-4c59-9f4c-b62d672903a8")
+	)
+	(junction
+		(at 187.96 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "394c561f-2d81-4b07-827b-08795f0af8e0")
+	)
+	(junction
+		(at 208.28 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39f600c2-cca5-473b-b642-8b2206be97dc")
+	)
+	(junction
+		(at 223.52 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3aaadeec-8871-4a53-abab-b39339f1e044")
+	)
+	(junction
+		(at 203.2 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cd44066-500c-4fac-afee-9bfcd4359edc")
+	)
+	(junction
+		(at 144.78 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cf57a93-c82b-4ed6-b91a-2e0764259c17")
+	)
+	(junction
+		(at 124.46 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44224895-7265-4182-944c-0e00b3d52752")
+	)
+	(junction
+		(at 157.48 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "52d86825-2e0a-4d24-8859-c7e96bc3f9b9")
+	)
+	(junction
+		(at 154.94 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "53747eaf-f5ce-4169-b510-8c150245106b")
+	)
+	(junction
+		(at 190.5 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56a79a76-50a2-47cb-960d-3bf3a7fceebd")
+	)
+	(junction
+		(at 83.82 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5ed3505c-037e-4df5-9143-e1d4197f0469")
+	)
+	(junction
+		(at 129.54 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f14a1f3-c4b5-452d-b4a2-fb348aad6729")
+	)
+	(junction
+		(at 205.74 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63d0bb9b-b5de-4c7a-9085-f852594e6cd0")
+	)
+	(junction
+		(at 185.42 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6405bb9d-3293-4c54-8dc9-405314166692")
+	)
+	(junction
+		(at 132.08 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6df6c6dd-6a79-4f5e-8b92-15ed9d4a4644")
+	)
+	(junction
+		(at 78.74 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75868cf5-3311-40b2-8cf1-a3e10fbaccdc")
+	)
+	(junction
+		(at 175.26 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78eb83ee-adc5-4745-b578-6a6d910a7d97")
+	)
+	(junction
+		(at 127 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83b34025-d2b2-4e3f-a54e-29615960e55b")
+	)
+	(junction
+		(at 116.84 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88af4f3b-cfba-40c1-840f-abec884aba57")
+	)
+	(junction
+		(at 81.28 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89aeb772-d250-43dd-972f-314edbb45f33")
+	)
+	(junction
+		(at 236.22 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8c5ef4d3-5f30-4948-b8c5-2c68b3dae390")
+	)
+	(junction
+		(at 200.66 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8f7cfb80-58d9-4a30-94b4-d7a5ff3c9322")
+	)
+	(junction
+		(at 109.22 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9613f73a-c96e-4aba-ba1c-4b016681511a")
+	)
+	(junction
+		(at 86.36 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e173ccd-26c2-4386-a314-b68f6851d82e")
+	)
+	(junction
+		(at 172.72 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ec57d49-1df3-4507-97bb-ee72bef14ed0")
+	)
+	(junction
+		(at 50.8 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0b2d1a1-a5f7-42d7-b098-df1d9bea00f9")
+	)
+	(junction
+		(at 57.15 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5f8f105-ea9b-418e-bcee-6801970178f5")
+	)
+	(junction
+		(at 147.32 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "acaf5961-ce2b-470f-b317-cab8fdfda56d")
+	)
+	(junction
+		(at 233.68 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad50ce87-5160-42af-a2e5-5882ddbda03d")
+	)
+	(junction
+		(at 170.18 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ad59b430-c1ce-4bee-a149-21c6dfde5948")
+	)
+	(junction
+		(at 139.7 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c43cec82-8d5a-4dfb-80fc-d1d9b2365897")
+	)
+	(junction
+		(at 57.15 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c493ed93-98a0-4b1a-a591-9b601b0cef25")
+	)
+	(junction
+		(at 218.44 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c84a2c86-81cf-4ade-938d-d4d285016781")
+	)
+	(junction
+		(at 96.52 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d25142d9-5a3a-4812-9016-84710224f0a0")
+	)
+	(junction
+		(at 142.24 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d304cad9-4f82-47cc-a89d-1f84ba4d6513")
+	)
+	(junction
+		(at 220.98 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6a17d0a-eeb1-4960-b537-51dabe456573")
+	)
+	(junction
+		(at 114.3 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da1bf627-528b-455f-bf2d-426452acc39c")
+	)
+	(junction
+		(at 231.14 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e8f25c43-e85b-452f-a5ea-2bd2d7606d53")
+	)
+	(junction
+		(at 177.8 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1979027-ff20-4c61-b4cb-462b47dcc8ef")
+	)
+	(junction
+		(at 101.6 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6ff34a6-eac1-409d-ab71-d1bfc873163e")
+	)
+	(junction
+		(at 215.9 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8c413f6-861f-4f4b-b9c5-1b07e2e722e6")
+	)
+	(junction
+		(at 193.04 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8eedb80-2b2a-4d71-9c6b-b76a04445577")
+	)
+	(junction
+		(at 162.56 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb5c4fa4-855e-4a37-8f6d-80bd6664a01e")
+	)
+	(wire
+		(pts
+			(xy 45.72 96.52) (xy 50.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "012c999d-1453-4fd2-a807-567f8d4bf730")
+	)
+	(wire
+		(pts
+			(xy 208.28 72.39) (xy 208.28 83.258)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0206b687-dbf8-4f30-aa0b-d18b0fc3d5f2")
+	)
+	(wire
+		(pts
+			(xy 78.74 104.14) (xy 93.98 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "033ec958-c5d3-4a54-8f4a-eab765d94c60")
+	)
+	(wire
+		(pts
+			(xy 251.46 72.39) (xy 251.46 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "061164fe-099f-4864-991f-eea53f384357")
+	)
+	(wire
+		(pts
+			(xy 246.38 104.14) (xy 231.14 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ab7dc17-041c-4040-998e-4d84188e503e")
+	)
+	(wire
+		(pts
+			(xy 190.5 99.06) (xy 205.74 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ebb2bec-bfaa-4f61-897f-723a12a42044")
+	)
+	(wire
+		(pts
+			(xy 190.5 72.39) (xy 190.5 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11c19445-3e2e-4b3a-92b2-a1d8b6424e83")
+	)
+	(wire
+		(pts
+			(xy 208.28 85.798) (xy 208.28 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e8e461-5030-4f00-928c-b213d9760396")
+	)
+	(wire
+		(pts
+			(xy 86.36 96.52) (xy 86.36 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15227cce-636a-4bea-ae46-70a86e9d296c")
+	)
+	(wire
+		(pts
+			(xy 177.8 96.52) (xy 193.04 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1689fb84-2bfe-42ce-b69b-4a5f1bd2bcba")
+	)
+	(wire
+		(pts
+			(xy 233.68 101.6) (xy 233.68 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17f22a8f-c375-499d-be6e-f6dac697f805")
+	)
+	(wire
+		(pts
+			(xy 129.54 72.39) (xy 129.54 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18738951-182e-4e5a-8fe2-6b89526ab91a")
+	)
+	(wire
+		(pts
+			(xy 132.08 72.39) (xy 132.08 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1896e4e5-305f-4347-9347-bfcbf5fbb45f")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6) (xy 111.76 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ae6c72f-a9c3-469c-bc47-2e90df64d4f4")
+	)
+	(wire
+		(pts
+			(xy 139.7 104.14) (xy 154.94 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d5ca6e4-6b66-4ecb-a3bf-d52d491747cd")
+	)
+	(wire
+		(pts
+			(xy 208.28 96.52) (xy 223.52 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ed682cd-4155-4ebb-9375-11aa716fe212")
+	)
+	(wire
+		(pts
+			(xy 177.8 72.39) (xy 177.8 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f4c16b1-187f-4284-b0af-68591f011ec4")
+	)
+	(wire
+		(pts
+			(xy 142.24 101.6) (xy 142.24 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20dd8e29-03c8-4749-915c-324374209c8e")
+	)
+	(wire
+		(pts
+			(xy 114.3 99.06) (xy 129.54 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2347f9dc-3d30-42c8-bf48-e697eec1d765")
+	)
+	(wire
+		(pts
+			(xy 147.32 72.39) (xy 147.32 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23a60621-d1ed-4816-b2dd-0e5cd50af526")
+	)
+	(wire
+		(pts
+			(xy 175.26 99.06) (xy 190.5 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23f5ab8f-9a98-4108-b716-456185d411b2")
+	)
+	(wire
+		(pts
+			(xy 99.06 99.06) (xy 114.3 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26ed0cd2-e7ba-4c7d-9cb4-4a3067eb51aa")
+	)
+	(wire
+		(pts
+			(xy 57.15 99.06) (xy 83.82 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2af107d6-fd13-4481-8f6e-7acd55ae43ef")
+	)
+	(wire
+		(pts
+			(xy 215.9 72.39) (xy 215.9 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cc57d85-b73d-4bc1-8a5d-01772319607f")
+	)
+	(wire
+		(pts
+			(xy 144.78 72.39) (xy 144.78 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e448596-23f2-4c69-896e-c1f00fc35dc6")
+	)
+	(wire
+		(pts
+			(xy 172.72 101.6) (xy 172.72 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e8cef6c-e0d3-4a79-ad46-894e25754bb0")
+	)
+	(wire
+		(pts
+			(xy 162.56 96.52) (xy 177.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f79c5a3-cc5c-4a43-bf99-41bb737201df")
+	)
+	(wire
+		(pts
+			(xy 124.46 72.39) (xy 124.46 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33bc9ba1-c66e-4eab-a0fe-f889e612bf3c")
+	)
+	(wire
+		(pts
+			(xy 101.6 85.09) (xy 101.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36a298af-eb8b-4625-b2df-8f80963c1e80")
+	)
+	(wire
+		(pts
+			(xy 127 101.6) (xy 127 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "438e536b-9817-4003-a173-e22c7204e29f")
+	)
+	(wire
+		(pts
+			(xy 220.98 99.06) (xy 236.22 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "463ee02e-697e-4fa0-9876-094d0e9d57cc")
+	)
+	(wire
+		(pts
+			(xy 160.02 99.06) (xy 175.26 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48403b92-3fd7-4193-8a2c-b5a847cbd182")
+	)
+	(wire
+		(pts
+			(xy 96.52 101.6) (xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c7f25df-df0f-457d-a436-e08a8f934b29")
+	)
+	(wire
+		(pts
+			(xy 187.96 101.6) (xy 203.2 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e211151-f39c-440f-8ef1-25c375744eca")
+	)
+	(wire
+		(pts
+			(xy 236.22 72.39) (xy 236.22 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5462aa01-d7bd-45f8-b6ab-6c8bd3e5e1d5")
+	)
+	(wire
+		(pts
+			(xy 175.26 72.39) (xy 175.26 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55974b5a-0855-4375-897a-7f4537c5b1e3")
+	)
+	(wire
+		(pts
+			(xy 215.9 104.14) (xy 231.14 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5917a95a-f0fe-4072-a17a-96a882656744")
+	)
+	(wire
+		(pts
+			(xy 254 72.39) (xy 254 83.5696)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5da629a2-7393-4b7f-9b07-60413c9bbc1e")
+	)
+	(wire
+		(pts
+			(xy 147.32 86.36) (xy 147.32 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e96806a-cf43-41df-9497-9309a84e7b9b")
+	)
+	(wire
+		(pts
+			(xy 101.6 96.52) (xy 116.84 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ff0a569-ab96-4fa1-9690-6f0c80535857")
+	)
+	(wire
+		(pts
+			(xy 109.22 104.14) (xy 124.46 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6039ebfd-0c39-4563-9349-de21a8e72cbe")
+	)
+	(wire
+		(pts
+			(xy 200.66 104.14) (xy 215.9 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "608c25ba-0fe1-4979-827e-a989cc4d2da4")
+	)
+	(wire
+		(pts
+			(xy 83.82 99.06) (xy 83.82 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61fd6c69-6ac3-41b1-b776-c64b5a2c434d")
+	)
+	(wire
+		(pts
+			(xy 162.56 86.36) (xy 162.56 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63afbf92-90f8-4155-abd8-0621c1a021c4")
+	)
+	(wire
+		(pts
+			(xy 160.02 72.39) (xy 160.02 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "651da063-8b52-4ce9-8441-b2430b30dc12")
+	)
+	(wire
+		(pts
+			(xy 238.76 86.1096) (xy 238.76 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "673d6c3d-3bd7-4b60-b968-d35e2214beb7")
+	)
+	(wire
+		(pts
+			(xy 172.72 101.6) (xy 187.96 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68650b93-eec7-40e2-959e-7c1091c5455c")
+	)
+	(wire
+		(pts
+			(xy 170.18 72.39) (xy 170.18 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "686b2bef-ee07-45ea-b1d2-a071424500d9")
+	)
+	(wire
+		(pts
+			(xy 223.52 96.52) (xy 238.76 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69949fbd-17c3-4544-8771-0e1e9c83bbae")
+	)
+	(wire
+		(pts
+			(xy 78.74 104.14) (xy 78.74 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ae414cc-ee2e-4ad3-8828-fb348d14be1f")
+	)
+	(wire
+		(pts
+			(xy 57.15 101.6) (xy 81.28 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fd2d8ad-1380-4a3a-84bb-289716cb2af4")
+	)
+	(wire
+		(pts
+			(xy 57.15 101.6) (xy 57.15 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70162dcc-26d3-4c36-a06c-27083cb66377")
+	)
+	(wire
+		(pts
+			(xy 99.06 72.39) (xy 99.06 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76781710-5adf-4643-9010-b9c15cf87659")
+	)
+	(wire
+		(pts
+			(xy 254 86.1096) (xy 254 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "786863ef-1d9c-440e-b769-f171138ca419")
+	)
+	(wire
+		(pts
+			(xy 45.72 101.6) (xy 57.15 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c91e048-5ed2-49fd-bedc-5392d61a8075")
+	)
+	(wire
+		(pts
+			(xy 162.56 72.39) (xy 162.56 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7da2c56c-f854-4c99-b77c-7e770e0e7cde")
+	)
+	(wire
+		(pts
+			(xy 83.82 99.06) (xy 99.06 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81730b6b-297d-4036-9bc6-c9697552f577")
+	)
+	(wire
+		(pts
+			(xy 50.8 104.14) (xy 50.8 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "827fca7f-a37e-4d27-b2f5-279a307b5419")
+	)
+	(wire
+		(pts
+			(xy 223.52 72.39) (xy 223.52 83.258)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8397eed8-d649-4786-a5b6-17dcd03e6831")
+	)
+	(wire
+		(pts
+			(xy 93.98 72.39) (xy 93.98 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85ff7ca9-af40-45f8-99dc-21852a978757")
+	)
+	(wire
+		(pts
+			(xy 116.84 85.09) (xy 116.84 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "864afcfa-1459-4f74-93cc-e0e8640c8a1b")
+	)
+	(wire
+		(pts
+			(xy 205.74 99.06) (xy 220.98 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8afa0144-ff75-4936-bf43-953141c62bd1")
+	)
+	(wire
+		(pts
+			(xy 132.08 96.52) (xy 147.32 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b6770cd-626e-46a6-a2d0-3bd12d0ca435")
+	)
+	(wire
+		(pts
+			(xy 109.22 72.39) (xy 109.22 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d219d1c-6ea8-4377-ba93-c245b1aa4cd4")
+	)
+	(wire
+		(pts
+			(xy 116.84 72.39) (xy 116.84 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9143cece-d823-4ec5-a2b9-4d9bbd744830")
+	)
+	(wire
+		(pts
+			(xy 205.74 72.39) (xy 205.74 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94e0b26c-56bc-4883-903b-1719244a8eb5")
+	)
+	(wire
+		(pts
+			(xy 50.8 96.52) (xy 50.8 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97c7851d-53d1-4cd1-96d8-34db9c02520f")
+	)
+	(wire
+		(pts
+			(xy 187.96 101.6) (xy 187.96 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "983bcf3b-0cef-432b-b2d6-3173955ee3a8")
+	)
+	(wire
+		(pts
+			(xy 200.66 72.39) (xy 200.66 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "995ce6a7-34b2-436f-8456-3fd64e83ef67")
+	)
+	(wire
+		(pts
+			(xy 132.08 85.09) (xy 132.08 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a317146-cb24-4e55-ba9e-5403abe6ec72")
+	)
+	(wire
+		(pts
+			(xy 86.36 82.55) (xy 86.36 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c22982a-e16c-4e13-9411-449ff0ac2081")
+	)
+	(wire
+		(pts
+			(xy 238.76 96.52) (xy 254 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a04751b8-f7df-415e-84b9-85f5669ebb94")
+	)
+	(wire
+		(pts
+			(xy 193.04 86.36) (xy 193.04 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08d0668-9821-47ed-bdb3-51b803dafb0c")
+	)
+	(wire
+		(pts
+			(xy 101.6 72.39) (xy 101.6 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a090e0b0-d10c-4661-9719-5f769f432194")
+	)
+	(wire
+		(pts
+			(xy 223.52 85.798) (xy 223.52 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18cffea-e458-476d-aee3-84420c9862d6")
+	)
+	(wire
+		(pts
+			(xy 144.78 99.06) (xy 160.02 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2c2a4ca-cd7f-42e7-8c85-1a5aed24d7f4")
+	)
+	(wire
+		(pts
+			(xy 193.04 72.39) (xy 193.04 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2cb8a64-d593-43df-bc02-fd946f9aa831")
+	)
+	(wire
+		(pts
+			(xy 154.94 72.39) (xy 154.94 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a60c86b8-7327-41b4-9321-61d32a28145c")
+	)
+	(wire
+		(pts
+			(xy 248.92 101.6) (xy 248.92 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6442a1c-768c-4d75-b372-6e23e79875e5")
+	)
+	(wire
+		(pts
+			(xy 139.7 72.39) (xy 139.7 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a880e3cd-8b29-42a8-9902-4e4a742249df")
+	)
+	(wire
+		(pts
+			(xy 50.8 96.52) (xy 86.36 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad9b757b-04f5-4d0d-844a-0d379a139a97")
+	)
+	(wire
+		(pts
+			(xy 220.98 72.39) (xy 220.98 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b212d88d-b0ac-46a3-a9bb-497a70c90bd3")
+	)
+	(wire
+		(pts
+			(xy 93.98 104.14) (xy 109.22 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b289aa00-b0ed-4239-897e-9800265178c6")
+	)
+	(wire
+		(pts
+			(xy 124.46 104.14) (xy 139.7 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b364a7fe-dd93-4c71-a7ab-1bb72d13e891")
+	)
+	(wire
+		(pts
+			(xy 129.54 99.06) (xy 144.78 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcada9e1-a978-4665-98bf-9eaa37285548")
+	)
+	(wire
+		(pts
+			(xy 57.15 99.06) (xy 57.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd681444-fc6a-4db4-9404-dbca1ae67936")
+	)
+	(wire
+		(pts
+			(xy 50.8 104.14) (xy 78.74 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1c49210-bc3d-43e0-a843-c86783b0f79e")
+	)
+	(wire
+		(pts
+			(xy 96.52 101.6) (xy 96.52 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf39f40-a2f2-466d-90a6-8d1b1417ed51")
+	)
+	(wire
+		(pts
+			(xy 185.42 72.39) (xy 185.42 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc9cfca0-fb35-4726-a580-9c298c700a5f")
+	)
+	(wire
+		(pts
+			(xy 170.18 104.14) (xy 185.42 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce7df2d3-03ce-4351-ada2-254ed3825299")
+	)
+	(wire
+		(pts
+			(xy 233.68 101.6) (xy 248.92 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cface082-12dc-43ac-8b8e-06addab799cf")
+	)
+	(wire
+		(pts
+			(xy 154.94 104.14) (xy 170.18 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1842654-e5ec-4123-a757-820c5cffa5ba")
+	)
+	(wire
+		(pts
+			(xy 238.76 72.39) (xy 238.76 83.5696)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1944289-2b5e-45e7-b511-3507bd2d2830")
+	)
+	(wire
+		(pts
+			(xy 45.72 99.06) (xy 57.15 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d202ac97-fc31-4835-927c-6610ca14e01b")
+	)
+	(wire
+		(pts
+			(xy 246.38 72.39) (xy 246.38 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d38bac3b-68b0-42f7-9064-7f434d4189f9")
+	)
+	(wire
+		(pts
+			(xy 218.44 101.6) (xy 218.44 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5863ff1-d5ce-4af9-9ed5-49ae14ab22c0")
+	)
+	(wire
+		(pts
+			(xy 236.22 99.06) (xy 251.46 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da43f627-d84a-4252-87ea-f77b0941a71d")
+	)
+	(wire
+		(pts
+			(xy 81.28 101.6) (xy 81.28 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbe6e11f-91ba-4f85-83db-6110dea2f7cf")
+	)
+	(wire
+		(pts
+			(xy 45.72 104.14) (xy 50.8 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfd03096-3643-4888-bfca-2a99d1c5aa13")
+	)
+	(wire
+		(pts
+			(xy 157.48 101.6) (xy 172.72 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e102fce1-79ba-4fb6-af74-e2830b8e5586")
+	)
+	(wire
+		(pts
+			(xy 177.8 86.36) (xy 177.8 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e13e8827-c48c-4b16-b642-8fdb3e80c661")
+	)
+	(wire
+		(pts
+			(xy 147.32 96.52) (xy 162.56 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c75914-672e-433b-a3f1-39c9ad734bc0")
+	)
+	(wire
+		(pts
+			(xy 127 101.6) (xy 142.24 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e523472e-9663-4c8b-b0f3-3d2aa81eb754")
+	)
+	(wire
+		(pts
+			(xy 142.24 101.6) (xy 157.48 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6787551-9cd0-47ad-bfce-d1414347ebe6")
+	)
+	(wire
+		(pts
+			(xy 86.36 96.52) (xy 101.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e79e2417-af35-4485-89a0-ce2f7d2826b8")
+	)
+	(wire
+		(pts
+			(xy 116.84 96.52) (xy 132.08 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7eb0c2f-203f-4b29-bff3-dfd02514a394")
+	)
+	(wire
+		(pts
+			(xy 203.2 101.6) (xy 218.44 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1391a0-e55d-4f8b-b26f-0fcd9b96b1c1")
+	)
+	(wire
+		(pts
+			(xy 81.28 101.6) (xy 96.52 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed80dd14-668f-469f-b4b8-398fd6d9e5cc")
+	)
+	(wire
+		(pts
+			(xy 218.44 101.6) (xy 233.68 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edd68a5d-de34-406a-93fd-66eb296c78ea")
+	)
+	(wire
+		(pts
+			(xy 231.14 72.39) (xy 231.14 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efd53037-0a52-476b-a0a2-f80508627ab5")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6) (xy 127 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f35bd550-b8de-4e8d-9643-eb64e025711a")
+	)
+	(wire
+		(pts
+			(xy 193.04 96.52) (xy 208.28 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7b1069b-f5f6-4f4f-b047-728172b4087b")
+	)
+	(wire
+		(pts
+			(xy 185.42 104.14) (xy 200.66 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9572940-7b06-47ef-ac83-fee55e9650b8")
+	)
+	(wire
+		(pts
+			(xy 114.3 72.39) (xy 114.3 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9913188-5536-4cc2-b9dd-0b2ba4bd168a")
+	)
+	(wire
+		(pts
+			(xy 157.48 101.6) (xy 157.48 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb4bfc79-d489-46dd-89d0-0e3263cd80be")
+	)
+	(wire
+		(pts
+			(xy 203.2 101.6) (xy 203.2 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd71f236-3d67-4bf2-9ad0-ad79be2c4289")
+	)
+	(global_label "SCL"
+		(shape input)
+		(at 57.15 93.98 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93f50995-9853-4ed5-ba7e-78ebaacb22b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.15 87.4872 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape input)
+		(at 57.15 106.68 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9bf69aa7-0e38-403d-8837-7386ff2298ac")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.15 113.2333 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 166.37 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0cf0fb63-1ae9-48a4-b803-a3ea980bca32")
+		(property "Reference" "J32"
+			(at 165.1 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 166.37 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 166.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d38bebc9-9970-41bc-b228-cfb93b94c115")
+		)
+		(pin "1"
+			(uuid "62c226d2-e880-4365-a738-7e96865fa33a")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 104.14 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e8b4778-f632-4aae-81ab-c28401b935a3")
+		(property "Reference" "J16"
+			(at 97.79 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 97.79 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 104.14 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5dc4569b-0103-446d-b1fc-6491ccb5f10a")
+		)
+		(pin "3"
+			(uuid "54660704-bd6f-45f5-95b0-c2024e5a937d")
+		)
+		(pin "2"
+			(uuid "f282e513-769a-48f9-9a54-14b204e8ca80")
+		)
+		(pin "4"
+			(uuid "07c9266e-5e4d-49b7-8dc5-2c7b96149fba")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 257.81 89.9196 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "129b09f1-4704-45bc-97ac-27b80f59601f")
+		(property "Reference" "J38"
+			(at 256.54 76.9656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 257.81 79.5056 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 257.81 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 257.81 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8a69d7ac-5856-4ded-b44e-f8b549713a9d")
+		)
+		(pin "1"
+			(uuid "2fe44bc5-71bf-409d-8a1a-d213ee7dceb2")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 90.17 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3017b998-087c-43c8-b90e-4d96e719a8a9")
+		(property "Reference" "J27"
+			(at 88.9 75.946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 90.17 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 90.17 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "cc620254-6e80-40d9-bb83-c340600e068a")
+		)
+		(pin "1"
+			(uuid "0f8de92c-354f-4dc4-ad05-382afaac0aeb")
+		)
+		(instances
+			(project ""
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 181.61 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30977947-1cbc-49f4-b8a0-0ac252e8392e")
+		(property "Reference" "J33"
+			(at 180.34 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 181.61 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 181.61 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 181.61 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e1793e35-6a66-471c-a019-9378caa4300b")
+		)
+		(pin "1"
+			(uuid "a2c416b8-ab67-4c38-afc0-48a93c4a064f")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 195.58 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d52597c-db71-4794-a80b-cceee04b9e56")
+		(property "Reference" "J22"
+			(at 189.23 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 189.23 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 195.58 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 195.58 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "76506de5-1679-429f-9b7f-57789ba6b532")
+		)
+		(pin "3"
+			(uuid "3e727d54-2d5e-48d7-a643-543f8e9b95b3")
+		)
+		(pin "2"
+			(uuid "4b7feddc-dfa6-4fb7-90c4-f2f210b7d14c")
+		)
+		(pin "4"
+			(uuid "d6e46878-768f-4112-9948-700ddd37ed1b")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 135.89 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f89743c-5a69-4580-8d5e-f383d9d8c261")
+		(property "Reference" "J30"
+			(at 134.62 75.946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 135.89 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "24dd7bdf-89e2-476d-b2a2-6352561e0e1c")
+		)
+		(pin "1"
+			(uuid "d3e6c75c-67dc-4095-9ee5-b7416106a38b")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 212.09 89.608 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4884f2c9-c4ee-4bb1-9cf5-31b4cb19d4d9")
+		(property "Reference" "J35"
+			(at 210.82 76.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 212.09 79.194 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 212.09 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 212.09 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5fd4bf61-0bf9-4a51-8d15-671059547813")
+		)
+		(pin "1"
+			(uuid "a1c8ce7a-024a-43a5-8e17-07d09e208445")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 210.82 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "501ce101-1b78-4dbb-8b78-abbe235956e5")
+		(property "Reference" "J23"
+			(at 204.47 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 204.47 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 210.82 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 210.82 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6fb2acc-4a81-44e8-bff0-3c495f70b1ce")
+		)
+		(pin "3"
+			(uuid "3bd49f73-a68f-4805-bd44-de89cd76c6bb")
+		)
+		(pin "2"
+			(uuid "cd0ba6be-2b79-4286-851d-a16b18d9c06b")
+		)
+		(pin "4"
+			(uuid "12bbb34b-d16f-47b8-93df-dba60f5cbcaa")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 151.13 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5eb65f43-2cf7-4590-a8f2-1b9bc1430423")
+		(property "Reference" "J31"
+			(at 149.86 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 151.13 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ab3866a4-3900-4bc7-8899-34e47b95d912")
+		)
+		(pin "1"
+			(uuid "aa1ccb49-4b29-4001-a183-ada134a2dad3")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 120.65 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81e5e4aa-dcf1-4936-9922-dd0065e14b89")
+		(property "Reference" "J29"
+			(at 119.38 75.946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 120.65 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 120.65 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "02078865-fbe8-4809-9284-c3ba7672a51f")
+		)
+		(pin "1"
+			(uuid "3f6cb988-b4b9-4164-91a7-df408508795c")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 227.33 89.608 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83770c87-18ff-4b41-808a-230db881985e")
+		(property "Reference" "J36"
+			(at 226.06 76.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 227.33 79.194 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 227.33 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.33 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 227.33 89.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "cff1444f-0063-438e-90f5-94369eb7108c")
+		)
+		(pin "1"
+			(uuid "5583e7ba-873a-4389-93a2-29de9b0eb424")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 242.57 89.9196 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8957a80e-a6df-4c8f-b35e-f20bfa943a3d")
+		(property "Reference" "J37"
+			(at 241.3 76.9656 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 242.57 79.5056 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 242.57 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 89.9196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8a7737ef-6e09-41f4-a3f6-f10881024f1f")
+		)
+		(pin "1"
+			(uuid "d9231866-30f0-4ebf-a5a8-5041a0dba9a8")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:Earth")
+		(at 50.8 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "99aaa0d9-1f62-4512-9a50-95db411f5810")
+		(property "Reference" "#PWR04"
+			(at 50.8 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Earth"
+			(at 50.8 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 50.8 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c2f7b70f-9f54-4a25-8ea1-77974e9d0bff")
+		)
+		(instances
+			(project ""
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 226.06 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9cc37b45-0054-41be-92ba-8e482e3ec7b0")
+		(property "Reference" "J24"
+			(at 219.71 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 219.71 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d0cab7d2-d158-4c20-9de0-f9cfb855bb6c")
+		)
+		(pin "3"
+			(uuid "f39e9be9-4f04-46bf-a594-c1decebdcdc0")
+		)
+		(pin "2"
+			(uuid "88534b49-5200-4fd0-9187-3c6ddedabc20")
+		)
+		(pin "4"
+			(uuid "758c0837-0317-42e4-a479-846603164397")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 105.41 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a0fc9079-939f-497a-ba92-d233f31af74a")
+		(property "Reference" "J28"
+			(at 104.14 75.946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 105.41 78.486 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 105.41 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 105.41 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "907fb6ba-26df-4509-b18e-b9087d4442b8")
+		)
+		(pin "1"
+			(uuid "067f2ef6-bc42-407b-9401-47d2e3573ed2")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 256.54 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a6308c9b-61f9-426f-9036-122f7d58ebf2")
+		(property "Reference" "J26"
+			(at 250.19 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 250.19 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 256.54 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 256.54 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0189ed5-40a4-43d6-bc18-44dd27e0617a")
+		)
+		(pin "3"
+			(uuid "36699d75-ffb8-4c20-8b6e-1c7dbff3ea5f")
+		)
+		(pin "2"
+			(uuid "ed6bc1da-3c68-47de-b093-5fef50ce4a13")
+		)
+		(pin "4"
+			(uuid "5c2299ac-2f61-4c24-88b5-b2550f6454de")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 149.86 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a72d9808-d89e-4812-ace5-0c8656878fce")
+		(property "Reference" "J19"
+			(at 143.51 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 143.51 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 149.86 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1955d1e4-e593-47da-92ab-6f70cb064d7b")
+		)
+		(pin "3"
+			(uuid "541b12b8-48fb-4048-aa88-37e5f2642c04")
+		)
+		(pin "2"
+			(uuid "fabbec73-f31d-4c27-9883-93421b2d7d6f")
+		)
+		(pin "4"
+			(uuid "357ae567-8887-40f5-88f8-01d68d3f10ff")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 88.9 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3e8d9cd-894a-4b26-99d7-a185a2c640be")
+		(property "Reference" "J15"
+			(at 82.55 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 82.55 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 88.9 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f570fd95-caa7-4a11-a18e-1527f8004306")
+		)
+		(pin "3"
+			(uuid "58718723-305b-42db-a411-2f8c89d9867e")
+		)
+		(pin "2"
+			(uuid "5ee09756-2505-4916-abb6-053b8090ed1b")
+		)
+		(pin "4"
+			(uuid "3b4ad303-7563-4c01-a852-f681341611bd")
+		)
+		(instances
+			(project ""
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 241.3 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4e30398-b6d4-49a4-94f0-083ff6b82705")
+		(property "Reference" "J25"
+			(at 234.95 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 234.95 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 241.3 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01935472-a759-4c39-8e94-fd319ba64053")
+		)
+		(pin "3"
+			(uuid "4bb2493e-182d-4315-a528-74a74c0578b5")
+		)
+		(pin "2"
+			(uuid "c3dd2d95-9ba8-471e-a66a-2cc3cac1b5c4")
+		)
+		(pin "4"
+			(uuid "2fce8efb-5f33-4a80-9d05-07aaca200c4c")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 50.8 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bed292c7-4649-45ad-b05f-a5f077403494")
+		(property "Reference" "#PWR03"
+			(at 50.8 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 50.8 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 50.8 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b833246b-ec3a-4e5a-8d3f-567361dab89d")
+		)
+		(instances
+			(project ""
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 165.1 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c051b0d5-f1e7-4de1-9100-c6bb932431c2")
+		(property "Reference" "J20"
+			(at 158.75 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 158.75 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 165.1 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93ca228d-485e-48cd-8085-400f6dd8326c")
+		)
+		(pin "3"
+			(uuid "b412d033-084b-4c9e-beec-3bb9a687f603")
+		)
+		(pin "2"
+			(uuid "9c6f5c41-b961-4e88-856d-ec9554787e23")
+		)
+		(pin "4"
+			(uuid "c572c073-dc14-411c-91f2-ca71d14466c2")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_2")
+		(at 196.85 90.17 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c175b02c-ffeb-4455-8d84-520fe5943673")
+		(property "Reference" "J34"
+			(at 195.58 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "~"
+			(at 196.85 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Header_1_x_2"
+			(at 196.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e501e791-783c-4ca4-bf70-7e7382ee5e67")
+		)
+		(pin "1"
+			(uuid "521bf740-f442-40f3-91a6-1db49a3b4c7d")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 134.62 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec7750c4-c105-46e9-959c-7e5273db78b9")
+		(property "Reference" "J18"
+			(at 128.27 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 128.27 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 134.62 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 134.62 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9eea0e49-a79d-41b6-ba22-353b4c882fa5")
+		)
+		(pin "3"
+			(uuid "8a25abc0-e5aa-4756-a529-0863021610a8")
+		)
+		(pin "2"
+			(uuid "f78be043-f437-4697-beda-5e1d5094f46d")
+		)
+		(pin "4"
+			(uuid "ffd5c370-bdac-4829-852e-0db97b1c7a1c")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 180.34 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed321cc5-e8d3-4b32-97c4-4c4db51a74eb")
+		(property "Reference" "J21"
+			(at 173.99 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 173.99 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 180.34 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 180.34 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27b404cd-b88d-4dfa-bd94-3253573a4cec")
+		)
+		(pin "3"
+			(uuid "8738c48a-b2f5-4e8e-914a-0f94e49baf39")
+		)
+		(pin "2"
+			(uuid "d42a5183-b164-4fbf-b4e9-01d4a0bf4d05")
+		)
+		(pin "4"
+			(uuid "cdda6b92-c252-41cf-9b27-a21ca53c0f82")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 119.38 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f077ec35-9042-4c01-8e80-53226aa24ac8")
+		(property "Reference" "J17"
+			(at 113.03 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 113.03 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:RJ11"
+			(at 119.38 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "58b0a673-727f-4e38-9e74-20eb7402a87f")
+		)
+		(pin "3"
+			(uuid "5877bf20-8d63-4c69-bdc0-10ca36a726de")
+		)
+		(pin "2"
+			(uuid "cf803566-b66c-4ace-bccf-c6d711503c87")
+		)
+		(pin "4"
+			(uuid "ca481f88-07e5-4039-8ae9-8c36540b2d4b")
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "1_Payden:Header_4")
+		(at 45.72 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1856bff-ec88-4d04-9ccc-fd43e3c3ac86")
+		(property "Reference" "J14"
+			(at 41.275 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Input_I2C"
+			(at 41.275 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "1_Library_Payden:Universal Master Rev A I2C B2B"
+			(at 45.72 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "7c0ac611-ec63-4da8-8fbf-5ca57c99eb74")
+		)
+		(pin "1"
+			(uuid "b47f9c90-cc01-42c5-9452-9c6588daed31")
+		)
+		(pin "3"
+			(uuid "45dcb02b-94e3-4e59-8fd2-3e16427c5584")
+		)
+		(pin "2"
+			(uuid "2ca6ac64-1308-4401-95d5-93d156ee0d5c")
+		)
+		(instances
+			(project ""
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b/fc39c95f-2bb8-4131-b209-e74be3936ccb"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

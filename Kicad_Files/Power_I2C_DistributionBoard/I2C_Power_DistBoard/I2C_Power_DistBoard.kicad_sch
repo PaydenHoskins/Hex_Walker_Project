@@ -1,0 +1,125 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "6f297192-f1cd-4fdb-992d-8c8508d0b46b")
+	(paper "A4")
+	(title_block
+		(title "I2C & Power Board")
+		(date "2026-04-07")
+	)
+	(lib_symbols)
+	(sheet
+		(at 72.39 69.85)
+		(size 54.61 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6d4f4054-e061-4200-9b62-12b715d5afae")
+		(property "Sheetname" "Power"
+			(at 72.39 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 72.39 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 69.85)
+		(size 54.61 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fc39c95f-2bb8-4131-b209-e74be3936ccb")
+		(property "Sheetname" "I2C"
+			(at 157.48 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "I2C.kicad_sch"
+			(at 157.48 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "I2C_Power_DistBoard"
+				(path "/6f297192-f1cd-4fdb-992d-8c8508d0b46b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "ISU Template.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WA1CtUYADZmdSDwWDeExdf0NT/EJm62OWJfYFONUaiQdXd7fhYWh/GWq2oAaQBwANWrf/gT
+				CJ+U+tZ2k9flL1q8vddi3jt3Y94k8OpJHV9QW1G0Rx8aMopNJ+3vph7f0JBh1H91ya36XQAAAuNp
+				PzmxxiW6dN73e1E4Xq7ztvrxgwVAwMCglCLqrI7zJfWjCoAAaUqJPutdUyGZT0obmMIXjJbGPSQi
+				zdPpbKyBO35bida61L/xe16O7iZPpaw6fZQ189l13aQIQGDjPKKeVSfzeNHLt+p3t7OJyKrPrFRp
+				D99tf3ytH+vs7dCnz8vk5bDzD/fd/qTtHz5lbf3yjV8Usxekd3fuMqPOycAm9TrnxDwy2mWb3Il3
+				Q7uvGxSMilWvZYgzfdCOjvPdY15gmXbhNi7cl6v0u77/SR3BoSX4tsu3FXUeuf7Rbjja5rFZ3c4X
+				5s4TdftoHNRzGIzLLRRLeGPSjGbrcLSPSPKIbBbWIMMCAQPOO+PsQbupipo1EAt8TWSmOP6vtBt3
+				lBD/HoOXfElN1NKCXFcsrp+0TxfHd2uLcZp94T1BKEWEuC3jcY17cB3XUB6SEtuxIubMsFnJv2AO
+				MyZ5zzmIr/7HF8Sak+JvsuxY7+KTKOaIEzyAi6ABQYYYGhJRkCRJYRgDYESmxqoencmTTP1d/ZfR
+				WS4w07ECYZRAykQTvhoZMALzo6z4otBAQnL4dc4ehS3LCPwg3c+qyOqSkf4J3gEjrulXVIm4YFe5
+				EAUVCQOohhSwDkxhz1oNUBNq7IRCKKGyPP8jfsLuxQCPhqqsjShjejMHu7EIS+RdKtaILangqKf0
+				yaWeIgYZwWkJ4Kq/OqscSoKwypKlC7y0o2haAHvNDAuYpTkegOgHXSmJLVm4SGRzXtn2Gb2HcWN7
+				fNRT9BOIAD2ZoP9boTk8EMuEKV/Xw5KTiOE7yZtOovrTSSffE13zzlrW8M4EA0oocoQW3WECLQws
+				CHEgLcIrhIJjLxUE154hc1Ju8CswfyVAn7/v4o9AZCdOeoXWzVaNPkq54xlx84VaYpdoNLFdQf43
+				LSIxPkwV|
+			)
+			(checksum "D9FA300A771A24E7A8677CD4C26E4408")
+		)
+	)
+)

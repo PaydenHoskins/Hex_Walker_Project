@@ -1,0 +1,178 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "a1f33660-2c45-4adb-b130-7be910afded7")
+	(paper "A4")
+	(lib_symbols)
+	(bezier
+		(pts
+			(xy 100.33 102.87) (xy 100.33 102.87) (xy 99.06 101.6) (xy 99.06 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "06d1e40f-6baa-4597-8cca-a64855221713")
+	)
+	(bezier
+		(pts
+			(xy 100.33 100.33) (xy 100.33 102.87) (xy 100.33 102.87) (xy 100.33 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ced14d14-4ca5-45a1-ad6a-ab34d357521b")
+	)
+	(bezier
+		(pts
+			(xy 99.06 101.6) (xy 100.33 100.33) (xy 100.33 100.33) (xy 100.33 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "e33aa24a-6f26-48d7-97a2-504954ce1c37")
+	)
+	(polyline
+		(pts
+			(xy 99.06 101.6) (xy 116.84 101.6)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "b644712d-4be7-4828-842f-6827eb1fdf09")
+	)
+	(sheet
+		(at 39.37 85.09)
+		(size 59.69 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6958c419-c697-4fee-8350-ae48a233f10a")
+		(property "Sheetname" "Power"
+			(at 39.37 84.3784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 39.37 118.6946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Servo_Board"
+				(path "/a1f33660-2c45-4adb-b130-7be910afded7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 116.84 85.09)
+		(size 59.69 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a387a482-be6c-4021-9875-005236195a8d")
+		(property "Sheetname" "Main_Board"
+			(at 116.84 84.3784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Main_Board.kicad_sch"
+			(at 116.84 118.6946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Servo_Board"
+				(path "/a1f33660-2c45-4adb-b130-7be910afded7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "ISU Template.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WA1CtUYADZmdSDwWDeExdf0NT/EJm62OWJfYFONUaiQdXd7fhYWh/GWq2oAaQBwANWrf/gT
+				CJ+U+tZ2k9flL1q8vddi3jt3Y94k8OpJHV9QW1G0Rx8aMopNJ+3vph7f0JBh1H91ya36XQAAAuNp
+				PzmxxiW6dN73e1E4Xq7ztvrxgwVAwMCglCLqrI7zJfWjCoAAaUqJPutdUyGZT0obmMIXjJbGPSQi
+				zdPpbKyBO35bida61L/xe16O7iZPpaw6fZQ189l13aQIQGDjPKKeVSfzeNHLt+p3t7OJyKrPrFRp
+				D99tf3ytH+vs7dCnz8vk5bDzD/fd/qTtHz5lbf3yjV8Usxekd3fuMqPOycAm9TrnxDwy2mWb3Il3
+				Q7uvGxSMilWvZYgzfdCOjvPdY15gmXbhNi7cl6v0u77/SR3BoSX4tsu3FXUeuf7Rbjja5rFZ3c4X
+				5s4TdftoHNRzGIzLLRRLeGPSjGbrcLSPSPKIbBbWIMMCAQPOO+PsQbupipo1EAt8TWSmOP6vtBt3
+				lBD/HoOXfElN1NKCXFcsrp+0TxfHd2uLcZp94T1BKEWEuC3jcY17cB3XUB6SEtuxIubMsFnJv2AO
+				MyZ5zzmIr/7HF8Sak+JvsuxY7+KTKOaIEzyAi6ABQYYYGhJRkCRJYRgDYESmxqoencmTTP1d/ZfR
+				WS4w07ECYZRAykQTvhoZMALzo6z4otBAQnL4dc4ehS3LCPwg3c+qyOqSkf4J3gEjrulXVIm4YFe5
+				EAUVCQOohhSwDkxhz1oNUBNq7IRCKKGyPP8jfsLuxQCPhqqsjShjejMHu7EIS+RdKtaILangqKf0
+				yaWeIgYZwWkJ4Kq/OqscSoKwypKlC7y0o2haAHvNDAuYpTkegOgHXSmJLVm4SGRzXtn2Gb2HcWN7
+				fNRT9BOIAD2ZoP9boTk8EMuEKV/Xw5KTiOE7yZtOovrTSSffE13zzlrW8M4EA0oocoQW3WECLQws
+				CHEgLcIrhIJjLxUE154hc1Ju8CswfyVAn7/v4o9AZCdOeoXWzVaNPkq54xlx84VaYpdoNLFdQf43
+				LSIxPkwV|
+			)
+			(checksum "D9FA300A771A24E7A8677CD4C26E4408")
+		)
+	)
+)
