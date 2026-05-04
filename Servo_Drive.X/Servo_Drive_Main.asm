@@ -8,7 +8,7 @@
 ;	    Description: Control Servo Positions based on		    *
 ;	                 what is sent over I2C				    *
 ;****************************************************************************
-
+I2C_TEMP	    EQU	H'220'
 COMPARE_BYTE	    EQU H'070'
 RESET_BYTE	    EQU H'071'
 COUNT1		    EQU	H'072' 
@@ -30,6 +30,7 @@ SERVO_MIN_FOOT_KNEE EQU	H'07E'
 ;******************************************
 #include <p16f1788.inc>
 #include "pic16f1788_Setup.inc"
+#include "I2C_SLAVE.inc"
 
 ;******************************************
 ;CONFIG
@@ -58,6 +59,7 @@ SERVO_MIN_FOOT_KNEE EQU	H'07E'
 ;******************************************
 SETUP
     CALL	INITALIZE		;Set Up pic main operation
+    CALL	I2C_SETUP
     
     BANKSEL	RCSTA
     BSF		RCSTA,4			;Disable Continous Receive UART
@@ -120,11 +122,7 @@ TIMER_2_START
     
     GOTO	MAIN
 MAIN
-    ;BANKSEL IOCAF
-    ;CLRF    IOCAF
-    ;BTFSC   IOCAF, 1
-    ;GOTO    INC_POSITION
-    NOP
+    
     GOTO MAIN
 
 INC_POSITION
@@ -145,7 +143,20 @@ SAVE_REG
     MOVWF   W_SAVE
     MOVF    BSR, 0
     MOVWF   BANK_SAVE
+    GOTO    INTERRUPT_TEST
+    
+INTERRUPT_TEST
+    BANKSEL PIR1
+    BTFSC   PIR1,3
+    CALL    I2C_RECEIVE 
+    BANKSEL PIR1
+    BTFSC   PIR1,1
     GOTO    POSITION_TEST
+    MOVF	BANK_SAVE, 0
+    MOVWF	BSR
+    
+    MOVF	W_SAVE, 0
+    RETFIE
     
 ;-----------POSITION-----------      
 ;<editor-fold defaultstate="collapsed" desc="TEST_DIPSWITCH FOR POSITION">
@@ -433,7 +444,7 @@ COUNT3_EQUAL
  
 RESET_PULSE
     BANKSEL	PORTB
-    BTFSC	PORTB, 5
+    BTFSC	PORTB, 5    ;IF PORTB5 IS SET THEN AUTO LEG STEP STARTS
     INCF	INC_COUNT, 1
     
     MOVLW	H'2F'
@@ -442,7 +453,7 @@ RESET_PULSE
     BTFSC	STATUS, 2
     GOTO	INC_POSITION
 
-FINISH_RESET
+FINISH_RESET 
     BANKSEL	PORTB
     BSF		PORTB, 0
     BSF		PORTB, 1
@@ -455,10 +466,7 @@ END_PWM
     BANKSEL	PIR1
     BCF		PIR1, 1
     
-    MOVF	BANK_SAVE, 0
-    MOVWF	BSR
     
-    MOVF	W_SAVE, 0
     RETFIE
 ;------------------------------  
    

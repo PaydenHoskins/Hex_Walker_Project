@@ -73,6 +73,8 @@ URC_RX_HANDLERS CODE
 ;****Save the Received Byte into Temp Variables, and Set a flag to signal to Decode  ***
 ;***************************************************************************************
 UART_RX
+ BANKSEL	CONNECT_CHK_COUNT
+ CLRF		CONNECT_CHK_COUNT
  BANKSEL    BYTE_COUNT
  MOVLW	    H'00'
  SUBWF	    BYTE_COUNT,0	    ;Subtract BYTE_COUNT - W; Result Store in W

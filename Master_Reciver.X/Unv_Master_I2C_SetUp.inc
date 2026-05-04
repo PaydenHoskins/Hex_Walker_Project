@@ -98,17 +98,18 @@
 	RETURN
 	
 ;******************************************************************************************************
-;****I2C_WRITE Function is Used to Send 4 Bytes to the Addressed slave.  See Above for Instructions ***
+;****I2C_WRITE Function is Used to Send 1 Byte to the Addressed slave.  See Above for Instructions ***
 ;******************************************************************************************************
-I2C_WRITE
+I2C_WRITE	
 	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
 	BANKSEL	    SSP1CON2
 	BSF	    SSP1CON2,0		;Generate Start Condition
 START_WRITE_DONE
 	BTFSC	    SSP1CON2,0
 	GOTO	    START_WRITE_DONE	;Wait Until Start Condition Completes
-	BANKSEL	    ADDRESS_W
-	MOVFW	    ADDRESS_W
+;	BANKSEL	    ADDRESS_W
+;	MOVFW	    ADDRESS_W
+	MOVLW	    H'00'
 	BANKSEL	    SSP1BUF
 	MOVWF	    SSP1BUF		;Send Peripheral Address (Write)
 ADDRESS_SENT_W
@@ -119,8 +120,8 @@ ADDRESS_SENT_W
 	BANKSEL	    SSP1CON2
 	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
 	GOTO	    BAD_COND		;Acknowledge Not Received
-	BANKSEL	    DATA_TX_1
-	MOVFW	    DATA_TX_1
+	BANKSEL	    INC_REG
+	MOVF	    INC_REG,0
 	BANKSEL	    SSP1BUF
 	MOVWF	    SSP1BUF		;Send First Data Byte
 DATA_1_SENT
@@ -131,42 +132,43 @@ DATA_1_SENT
 	BANKSEL	    SSP1CON2
 	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
 	GOTO	    BAD_COND		;Acknowledge Not Received
-	BANKSEL	    DATA_TX_2
-	MOVFW	    DATA_TX_2
-	BANKSEL	    SSP1BUF
-	MOVWF	    SSP1BUF		;Send Second Data Byte
-DATA_2_SENT
-	BANKSEL	    SSP1STAT
-	BTFSC	    SSP1STAT,0
-	GOTO	    DATA_2_SENT		;Wait Unitl Buffer is Clear (Data is Sent)
-	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
-	BANKSEL	    SSP1CON2
-	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
-	GOTO	    BAD_COND		;Acknowledge not Received
-	BANKSEL	    DATA_TX_3
-	MOVFW	    DATA_TX_3
-	BANKSEL	    SSP1BUF
-	MOVWF	    SSP1BUF		;Send Third Data Byte
-DATA_3_SENT
-	BANKSEL	    SSP1STAT
-	BTFSC	    SSP1STAT,0
-	GOTO	    DATA_3_SENT		;Wait Until Buffer is Clear (Data is Sent)
-	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
-	BANKSEL	    SSP1CON2
-	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
-	GOTO	    BAD_COND		;Acknowledge Not Received
-	BANKSEL	    DATA_TX_4
-	MOVFW	    DATA_TX_4
-	BANKSEL	    SSP1BUF
-	MOVWF	    SSP1BUF		;Send Fourth Data Byte
-DATA_4_SENT
-	BANKSEL	    SSP1STAT
-	BTFSC	    SSP1STAT,0
-	GOTO	    DATA_4_SENT		;Wait Until Buffer is Clear (Data is Sent)
-	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
-	BANKSEL	    SSP1CON2
-	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
-	GOTO	    BAD_COND		;Acknowledge Not Received
+	GOTO	    GOOD_STOP
+;	BANKSEL	    DATA_TX_2
+;	MOVFW	    DATA_TX_2
+;	BANKSEL	    SSP1BUF
+;	MOVWF	    SSP1BUF		;Send Second Data Byte
+;DATA_2_SENT
+;	BANKSEL	    SSP1STAT
+;	BTFSC	    SSP1STAT,0
+;	GOTO	    DATA_2_SENT		;Wait Unitl Buffer is Clear (Data is Sent)
+;	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
+;	BANKSEL	    SSP1CON2
+;	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
+;	GOTO	    BAD_COND		;Acknowledge not Received
+;	BANKSEL	    DATA_TX_3
+;	MOVFW	    DATA_TX_3
+;	BANKSEL	    SSP1BUF
+;	MOVWF	    SSP1BUF		;Send Third Data Byte
+;DATA_3_SENT
+;	BANKSEL	    SSP1STAT
+;	BTFSC	    SSP1STAT,0
+;	GOTO	    DATA_3_SENT		;Wait Until Buffer is Clear (Data is Sent)
+;	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
+;	BANKSEL	    SSP1CON2
+;	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
+;	GOTO	    BAD_COND		;Acknowledge Not Received
+;	BANKSEL	    DATA_TX_4
+;	MOVFW	    DATA_TX_4
+;	BANKSEL	    SSP1BUF
+;	MOVWF	    SSP1BUF		;Send Fourth Data Byte
+;DATA_4_SENT
+;	BANKSEL	    SSP1STAT
+;	BTFSC	    SSP1STAT,0
+;	GOTO	    DATA_4_SENT		;Wait Until Buffer is Clear (Data is Sent)
+;	CALL	    I2C_IDLE		;Ensure the I2C BUS is idle
+;	BANKSEL	    SSP1CON2
+;	BTFSC	    SSP1CON2,6		;Was an Acknowledge Received?
+;	GOTO	    BAD_COND		;Acknowledge Not Received
 GOOD_STOP
 	BANKSEL	    SSP1CON2
 	BSF	    SSP1CON2,2		;Generate a Stop Condition

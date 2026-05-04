@@ -25,6 +25,10 @@
 ;     x.								    *
 ;									    *
 ;****************************************************************************
+;***************EQU********************
+INC_REG		EQU H'070'
+POSITION_CHANGE	EQU H'071'
+    
     
 #INCLUDE "p16f1788.inc"				;Processor specific variable definitions
 #INCLUDE "Unv_Master_PIC_SetUp.inc"	;Universal Main Board PIC Set Up
@@ -58,6 +62,9 @@
 SETUP
     CALL	INITIALIZE		;Set Up SFR and GPR For PIC Microcontroller
     CALL	I2C_SETUP_MASTER	;Set Up PIC for I2C as Master
+    
+    CLRF	INC_REG
+    CLRF	POSITION_CHANGE
     
     BANKSEL	RCSTA
     BSF		RCSTA,4			;Enable Continous Receive UART
@@ -97,7 +104,6 @@ INTERRUPT
 ;*** And 2. Delays I2C COM to send packets every 96mS				     ***
 ;***************************************************************************************
 TMR2_INTERRUPT
-    
     ;***************************************************************************************
     ;**** CONNECT_CHK_COUNT is incremented and if it surpasses 15 a UART COM Timeout is  ***
     ;**** Identified.  This should result in a timeout of no UART RX in 0.5s		 ***
@@ -117,7 +123,7 @@ TMR2_INTERRUPT
     ;***************************************************************************************
     BANKSEL	I2C_COM_DELAY
     INCF	I2C_COM_DELAY
-    MOVLW	D'3'			;32mS * 3 = 96mS Per I2C COM Send
+    MOVLW	D'10'			;32mS * 3 = 96mS Per I2C COM Send
     SUBWF	I2C_COM_DELAY,0
     BANKSEL	STATUS
     BTFSC	STATUS,2
@@ -149,8 +155,8 @@ TMR2_INTERRUPT_END
     RETURN
 
 CONTROLLER_DISCONNECT  ;******Connection Timeout Occured.  Run Stop Functions******
-    ;**** Here Add an All Stop Command to the slaves for UART Timeout ****
-    ;**** i.e. Send Motor Stop VIA I2C to Peripheral Boards	      ****
+    ;CLRF    INC_REG
+    ;CALL    I2C_WRITE
     RETURN
    
 ;***************************************************************************************
@@ -163,49 +169,48 @@ CONTROLLER_DISCONNECT  ;******Connection Timeout Occured.  Run Stop Functions***
 ;****--------------------------------------------------------------------------------***
 ;***************************************************************************************
 SEND_I2C
-    BANKSEL	DRIVE_CONTROL_W
-    MOVFW	DRIVE_CONTROL_W
-    BANKSEL	ADDRESS_W
-    MOVWF	ADDRESS_W	    ;Set Drive Control Board I2C Address
-    BANKSEL	JOY1_UD
-    MOVFW	JOY1_UD
-    BANKSEL	DATA_TX_1
-    MOVWF	DATA_TX_1	    ;Load Joystick 1 Up and Down Data Byte as Data Byte 1
-    BANKSEL	JOY1_LR
-    MOVFW	JOY1_LR
-    BANKSEL	DATA_TX_2
-    MOVWF	DATA_TX_2	    ;Load Joystick 1 Left and Right Data Byte as Data Byte 2
-    BANKSEL	JOY2_UD
-    MOVFW	JOY2_UD
-    BANKSEL	DATA_TX_3
-    MOVWF	DATA_TX_3	    ;Load Joystick 2 Up and Down Data Byte as Data Byte 3
-    BANKSEL	JOY2_LR
-    MOVFW	JOY2_LR
-    BANKSEL	DATA_TX_4
-    MOVWF	DATA_TX_4	    ;Load Joystick 2 Left and Right Data Byte as Data Byte 4
+    INCF    POSITION_CHANGE,1
+    MOVLW   H'32'
+    XORWF   POSITION_CHANGE, 0
+    BANKSEL STATUS
+    BTFSS   STATUS, 2
+    GOTO    I2C_GOTO
+    
+    INCF    INC_REG, 1
+    MOVLW   H'09'
+    XORWF   INC_REG, 0
+    BANKSEL STATUS
+    BTFSS   STATUS, 2
+    GOTO    I2C_GOTO
+    
+    CLRF    INC_REG
+    MOVLW   H'03'
+    MOVWF   INC_REG
+    GOTO    I2C_GOTO
+I2C_GOTO
     CALL	I2C_WRITE
-    ;Load and Send Peripheral Board Data 
-    BANKSEL	PERIPHERAL_CONTROL_W
-    MOVFW	PERIPHERAL_CONTROL_W
-    BANKSEL	ADDRESS_W
-    MOVWF	ADDRESS_W	    ;Set Peripheral Control Board I2C Address
-    BANKSEL	JOY3_UD
-    MOVFW	JOY3_UD
-    BANKSEL	DATA_TX_1
-    MOVWF	DATA_TX_1	    ;Load Joystick 3 Up and Down Data Byte as Data Byte 1
-    BANKSEL	JOY3_LR
-    MOVFW	JOY3_LR
-    BANKSEL	DATA_TX_2
-    MOVWF	DATA_TX_2	    ;Load Joystick 3 Left and Right Data Byte as Data Byte 2
-    BANKSEL	BUTTON_STATUS_1
-    MOVFW	BUTTON_STATUS_1
-    BANKSEL	DATA_TX_3
-    MOVWF	DATA_TX_3	    ;Load Button Data Packet 1 as Data Byte 3
-    BANKSEL	BUTTON_STATUS_2
-    MOVFW	BUTTON_STATUS_2
-    BANKSEL	DATA_TX_4
-    MOVWF	DATA_TX_4	    ;Load button Data Packet 2 as Data Byte 4
-    CALL	I2C_WRITE
+;    ;Load and Send Peripheral Board Data 
+;    BANKSEL	PERIPHERAL_CONTROL_W
+;    MOVFW	PERIPHERAL_CONTROL_W
+;    BANKSEL	ADDRESS_W
+;    MOVWF	ADDRESS_W	    ;Set Peripheral Control Board I2C Address
+;    BANKSEL	JOY3_UD
+;    MOVFW	JOY3_UD
+;    BANKSEL	DATA_TX_1
+;    MOVWF	DATA_TX_1	    ;Load Joystick 3 Up and Down Data Byte as Data Byte 1
+;    BANKSEL	JOY3_LR
+;    MOVFW	JOY3_LR
+;    BANKSEL	DATA_TX_2
+;    MOVWF	DATA_TX_2	    ;Load Joystick 3 Left and Right Data Byte as Data Byte 2
+;    BANKSEL	BUTTON_STATUS_1
+;    MOVFW	BUTTON_STATUS_1
+;    BANKSEL	DATA_TX_3
+;    MOVWF	DATA_TX_3	    ;Load Button Data Packet 1 as Data Byte 3
+;    BANKSEL	BUTTON_STATUS_2
+;    MOVFW	BUTTON_STATUS_2
+;    BANKSEL	DATA_TX_4
+;    MOVWF	DATA_TX_4	    ;Load button Data Packet 2 as Data Byte 4
+;    CALL	I2C_WRITE
     ;*******************************************************************************
     ;***Add More Board Here by Loading Data Bytes and Setting New Board Address  ***
     ;*** You will also need to add these addresses into Unv_Master_I2C_SetUp.inc ***
