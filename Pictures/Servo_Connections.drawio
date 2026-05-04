@@ -1,0 +1,47 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.5.2 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="Rzht5qpMOnvci5Nzl9sR">
+    <mxGraphModel dx="403" dy="381" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Leg Board/&lt;div&gt;Servo Board&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="90" x="325" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Servo" vertex="1">
+          <mxGeometry height="60" width="120" x="310" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-9" edge="1" parent="1" source="dEWkaIrRg7e0SzU4zTIR-1" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.691;entryY=-0.009;entryDx=0;entryDy=0;entryPerimeter=0;" target="dEWkaIrRg7e0SzU4zTIR-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="350" as="sourcePoint" />
+            <mxPoint x="420" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-10" connectable="0" parent="dEWkaIrRg7e0SzU4zTIR-9" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="PWM" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-11" edge="1" parent="1" source="dEWkaIrRg7e0SzU4zTIR-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dEWkaIrRg7e0SzU4zTIR-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="350" as="sourcePoint" />
+            <mxPoint x="420" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-12" connectable="0" parent="dEWkaIrRg7e0SzU4zTIR-11" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="GND" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-13" edge="1" parent="1" source="dEWkaIrRg7e0SzU4zTIR-1" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.319;entryY=0.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="dEWkaIrRg7e0SzU4zTIR-2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="350" as="sourcePoint" />
+            <mxPoint x="420" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dEWkaIrRg7e0SzU4zTIR-14" connectable="0" parent="dEWkaIrRg7e0SzU4zTIR-13" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" value="5V" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
